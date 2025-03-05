@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Modal, Button, Form, Spinner } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 const RefundConfirmationModal = ({ show, onHide, onConfirm }) => {
   const [processing, setProcessing] = useState(false);
