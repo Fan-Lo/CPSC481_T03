@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaArrowLeft, FaHome } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
@@ -9,16 +9,6 @@ const RefundTicketInfo = () => {
   const navigate = useNavigate();
   const [showModal, setShowModal] = useState(false);
   const [agreed, setAgreed] = useState(false);
-
-  useEffect(() => {
-    const handleScannerInput = (event) => {
-      if (event.key === "Enter") {
-        navigate("/refund-qr-info");
-      }
-    };
-    window.addEventListener("keydown", handleScannerInput);
-    return () => window.removeEventListener("keydown", handleScannerInput);
-  }, [navigate]);
 
   const handleHomeClick = () => {
     navigate("/");
@@ -40,7 +30,7 @@ const RefundTicketInfo = () => {
         className="position-absolute top-0 start-0 m-3 d-flex align-items-center btn-lg"
         onClick={() => navigate(-1)}
       >
-        <FaArrowLeft className="me-2" size={24} />
+        <FaArrowLeft size={24} />
       </Button>
 
       {/* Logo */}
@@ -88,7 +78,7 @@ const RefundTicketInfo = () => {
           className="m-3 d-flex align-items-center btn-lg"
           onClick={handleHomeClick}
         >
-          <FaHome className="me-2" size={24} />
+          <FaHome size={24} />
         </Button>
       </div>
 
