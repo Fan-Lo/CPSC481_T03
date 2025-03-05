@@ -1,4 +1,4 @@
-import { image } from "d3";
+//import { image } from "d3";
 
 export const movieImages = {
   image1: require("./movies/movie1.jpg"),
